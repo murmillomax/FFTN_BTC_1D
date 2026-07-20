@@ -32,3 +32,8 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Python package build
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fftn-btc-1d"
+version = "0.2.0"
+description = "Bitcoin Daily Forecasting Engine based on FFT analysis"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
