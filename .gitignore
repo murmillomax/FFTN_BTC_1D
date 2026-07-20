@@ -10,8 +10,14 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data
+
+# Ignorar archivos de datos pesados
 data/raw/*
 data/processed/*
+
+# Mantener estructura de carpetas
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 
 # Models
 models/*.pkl
