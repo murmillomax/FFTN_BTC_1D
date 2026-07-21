@@ -12,7 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import timedelta
 
-from config import (
+from config_legacy  import (
     CUTOFF_DATE,
     FORECAST_DAYS,
     POLY_DEGREE,

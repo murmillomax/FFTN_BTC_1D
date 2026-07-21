@@ -2,44 +2,81 @@
 
 ## Origin
 
-Modelo experimental original desarrollado antes de la arquitectura modular FFTN_BTC_1D.
+Modelo inicial desarrollado antes de la arquitectura FFTN_BTC_1D.
 
-Este código corresponde al prototipo inicial de investigación utilizado para explorar:
+Este modelo representa la primera implementación experimental
+del sistema Poly + Fourier utilizado para análisis y pronóstico
+de series temporales BTC.
 
-- Tendencia polinómica
-- Reconstrucción Fourier
-- Modelado del error del modelo
+---
 
 ## Files
 
 - fourier_poly_validation.py
 - config_legacy.py
-
-## Dependencies (original)
-
-El modelo original dependía de:
-
-- config.py
 - fourier_analysis.py
-- data/processed/btc_1d.csv
 
-Estas dependencias fueron conservadas como referencia histórica.
+---
+
+## Dependencies
+
+El modelo legacy conserva sus propias dependencias
+para garantizar reproducibilidad histórica.
+
+No utiliza módulos de src/.
+
+Dataset requerido:
+
+data/processed/btc_1d.csv
+
+
+Columnas principales utilizadas:
+
+- OpenTime
+- Close
+
+---
 
 ## Purpose
 
-Preservar el modelo experimental original antes de la migración modular.
-
-Componentes incluidos:
+Preservar el modelo experimental original:
 
 - Tendencia polinómica
-- Selección automática de ciclos Fourier
-- Reconstrucción Poly + Fourier
-- Calibración del último punto conocido
-- Análisis estadístico del error
+- Fourier automático
+- Calibración último punto conocido
+- Estadísticas del error
+- Error porcentual del modelo
 - FFT del error porcentual
-- Modelado Fourier del error porcentual (FFT2)
+- FFT2 del error
 - Búsqueda de desfase del error
 - Pronóstico futuro
+
+---
+
+## Migration Verification
+
+El modelo fue migrado desde la ubicación original
+hacia:
+
+reference/legacy/
+
+
+manteniendo la lógica matemática original.
+
+Validación realizada:
+
+- Ejecución del modelo original.
+- Ejecución del modelo dentro de FFTN_BTC_1D.
+- Comparación de resultados obtenidos.
+
+Resultado:
+
+Las dos ejecuciones producen resultados equivalentes.
+
+El modelo legacy queda establecido como referencia
+experimental reproducible.
+
+---
 
 ## Status
 
@@ -47,4 +84,4 @@ Código congelado.
 
 No modificar directamente.
 
-Este directorio funciona como referencia histórica para la migración hacia la arquitectura modular FFTN_BTC_1D.
+Será utilizado como referencia para la migración modular.
