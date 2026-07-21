@@ -1,0 +1,36 @@
+{
+    "version": "1.0",
+
+    "model": "Legacy Fourier Poly Validation",
+
+    "dataset": {
+        "name": "btc_1d.csv",
+        "sha256": "54b9e3e69f591cd75fdaf49e73f979b151be96f9aa75fe2590303b9bdd87bd95"
+    },
+
+    "configuration": {
+        "train_days": 1040,
+        "poly_degree": 5,
+        "forecast_horizon": 30
+    },
+
+    "training_range": {
+        "start": "2023-08-10",
+        "end": "2026-06-14"
+    },
+
+    "cycles": [
+        {
+            "rank": 1,
+            "period_days": 260.0
+        },
+        {
+            "rank": 2,
+            "period_days": 173.3
+        },
+        {
+            "rank": 3,
+            "period_days": 86.7
+        }
+    ]
+}

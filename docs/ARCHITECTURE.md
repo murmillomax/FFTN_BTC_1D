@@ -100,6 +100,10 @@ FFTN_BTC_1D/
             ├── fourier_analysis.py
             ├── config_legacy.py
             └── LEGACY_NOTES.md
+        │
+        └── baseline/
+        ├── dataset_signature.json
+        └── verify_dataset.py
 
 ---
 
@@ -231,7 +235,7 @@ Archivos asociados:
 
 - fourier_analysis.py
 - config_legacy.py
-- btc_1d.csv (dataset histórico)
+- data/processed/btc_1d.csv (dataset histórico)
 
 El objetivo es permitir la ejecución futura
 del modelo original sin depender de cambios
@@ -276,6 +280,37 @@ para garantizar reproducibilidad.
 
 ---
 
+# 5.3 Baseline
+
+La carpeta:
+
+reference/
+
+└── baseline/
+
+contiene las referencias oficiales utilizadas para comparar
+la evolución del proyecto y validar futuras implementaciones.
+
+Los archivos dentro de baseline no contienen código ejecutable.
+Representan resultados y configuraciones de referencia
+generadas por modelos validados.
+
+Cada archivo tiene una responsabilidad única.
+
+---
+
+## cycles_reference.json
+
+Responsabilidad:
+
+Conservar la referencia oficial de los ciclos dominantes
+seleccionados por el modelo legacy para un dataset y una
+configuración determinados.
+
+Su objetivo es permitir la comparación entre la selección
+de ciclos del modelo legacy y futuras implementaciones.
+
+---
 
 # 6. Estrategia de migración
 
