@@ -480,11 +480,29 @@ Introducido:
 - Preservación del modelo legacy
 - Carpeta reference/
 - Dependencias históricas aisladas
-- Dataset BTC diario de referencia
-- Firma SHA256 del dataset
-- Baseline reproducible
-- Referencias de ciclos y métricas
-- Verificación de integridad del dataset
+- Documentación de arquitectura
+- Separación entre investigación e implementación
+
+---
+## v0.6.1
+
+Estado:
+
+Mantenimiento de arquitectura de referencia.
+
+Introducido:
+
+- Carpeta reference/baseline/
+- Firma de integridad SHA256 del dataset
+- Verificación automática del dataset
+- Referencia oficial de ciclos dominantes
+- Referencia oficial de métricas del modelo legacy
+- Documentación de responsabilidades baseline
+
+Objetivo:
+
+Fortalecer la reproducibilidad del modelo legacy
+sin modificar el comportamiento del código congelado.
 
 ---
 
