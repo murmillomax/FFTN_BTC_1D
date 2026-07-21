@@ -18,6 +18,7 @@ data/processed/*
 # Mantener estructura de carpetas
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/btc_1d.csv
 
 # Models
 models/*.pkl

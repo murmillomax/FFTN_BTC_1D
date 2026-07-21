@@ -1,0 +1,22 @@
+{
+    "dataset": "btc_1d.csv",
+    "location": "data\\processed\\btc_1d.csv",
+    "type": "Bitcoin daily candles",
+    "rows": 3120,
+    "columns": [
+        "OpenTime",
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume"
+    ],
+    "first_date": "2018-01-01",
+    "last_date": "2026-07-17",
+    "sha256": "54b9e3e69f591cd75fdaf49e73f979b151be96f9aa75fe2590303b9bdd87bd95",
+    "created": "2026-07-21",
+    "used_by": [
+        "fourier_poly_validation.py",
+        "fourier_analysis.py"
+    ]
+}
