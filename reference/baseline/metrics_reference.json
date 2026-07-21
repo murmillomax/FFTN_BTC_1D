@@ -1,0 +1,103 @@
+{
+    "version": "1.0",
+
+    "model": "Legacy Fourier Poly Validation",
+
+    "dataset": {
+        "name": "btc_1d.csv",
+        "sha256": "54b9e3e69f591cd75fdaf49e73f979b151be96f9aa75fe2590303b9bdd87bd95"
+    },
+
+    "configuration": {
+        "train_days": 1040,
+        "poly_degree": 5,
+        "forecast_horizon": 30,
+        "fft2_cycles": 30
+    },
+
+    "training_range": {
+        "start": "2023-08-10",
+        "end": "2026-06-14"
+    },
+
+    "cycles": [
+        {
+            "rank": 1,
+            "period_days": 260.0
+        },
+        {
+            "rank": 2,
+            "period_days": 173.3
+        },
+        {
+            "rank": 3,
+            "period_days": 86.7
+        }
+    ],
+
+    "training_metrics": {
+        "correlation": 0.977439,
+        "rmse": 5451.47,
+        "mae": 4333.05
+    },
+
+    "validation_metrics": {
+        "horizon_days": 30,
+        "method": "B Estadístico",
+        "correlation": -0.465237,
+        "rmse": 3539.13,
+        "mae": 2955.01
+    },
+
+    "error_statistics": {
+        "bias": -1.27,
+        "median": 134.10,
+        "std": 5451.47,
+        "min": -15788.99,
+        "max": 15629.32,
+        "p5": -8534.78,
+        "p25": -3616.35,
+        "p50": 134.10,
+        "p75": 3457.07,
+        "p95": 9045.13
+    },
+
+    "error_percent_statistics": {
+        "bias_percent": -0.554,
+        "median_percent": 0.185,
+        "std_percent": 8.682,
+        "mae_percent": 6.583,
+        "rmse_percent": 8.700
+    },
+
+    "calibration": {
+        "model_last_value": 76456.9437,
+        "real_last_value": 65746.45,
+        "offset": -10710.4937
+    },
+
+    "fft2_configuration": {
+        "cycles_used": 30
+    },
+
+    "fft2_error_metrics": {
+        "correlation": 0.923363,
+        "rmse_percent_1": 3.379,
+        "rmse_percent_2": 3.384
+    },
+
+    "fft2_shift": {
+        "selected_shift_days": -2
+    },
+
+    "fft1_fft2_metrics": {
+        "correlation": 0.996108,
+        "rmse": 2341.64,
+        "mae": 1761.72
+    },
+
+    "forecast": {
+        "horizon_days": 77,
+        "fft2_shift_days": -2
+    }
+}

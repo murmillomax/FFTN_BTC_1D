@@ -352,6 +352,8 @@ reference/
 │ ├── dataset_signature.json
 │ ├── cycles_reference.json
 │ ├── metrics_reference.json
+│ └── verify_dataset.py
+│
 │ ├── forecast_reference.csv
 │ ├── error_fft2_reference.csv
 │ └── validation_report.md
@@ -366,6 +368,62 @@ reference/
 │
 └── utils/
 
+## baseline/
+
+La carpeta:
+
+reference/baseline/
+
+contiene las referencias oficiales generadas
+por el modelo legacy.
+
+Su responsabilidad es conservar el estado
+experimental reproducible del modelo de referencia.
+
+Archivos actuales:
+
+### dataset_signature.json
+
+Responsabilidad:
+
+- Identificar el dataset utilizado.
+- Registrar características estructurales.
+- Verificar integridad mediante SHA256.
+
+
+### cycles_reference.json
+
+Responsabilidad:
+
+- Registrar los ciclos Fourier dominantes
+  seleccionados por el modelo legacy.
+- Asociar los ciclos con una configuración
+  y dataset determinados.
+
+
+### metrics_reference.json
+
+Responsabilidad:
+
+- Registrar métricas obtenidas durante la ejecución
+  del modelo legacy.
+
+Incluye:
+
+- Métricas de entrenamiento.
+- Métricas de validación.
+- Estadísticas del error.
+- Métricas FFT2.
+- Métricas combinadas FFT1 + FFT2.
+
+
+### verify_dataset.py
+
+Responsabilidad:
+
+- Verificar que el dataset actual coincide
+  con la firma SHA256 registrada.
+- Garantizar reproducibilidad del experimento.
 
 Estas carpetas serán creadas únicamente cuando exista
 una definición clara de su responsabilidad y contenido.
@@ -422,8 +480,11 @@ Introducido:
 - Preservación del modelo legacy
 - Carpeta reference/
 - Dependencias históricas aisladas
-- Documentación de arquitectura
-- Separación entre investigación e implementación
+- Dataset BTC diario de referencia
+- Firma SHA256 del dataset
+- Baseline reproducible
+- Referencias de ciclos y métricas
+- Verificación de integridad del dataset
 
 ---
 
