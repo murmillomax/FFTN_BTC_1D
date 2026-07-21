@@ -484,6 +484,28 @@ Introducido:
 - Separación entre investigación e implementación
 
 ---
+
+## v0.6.1
+
+Estado:
+
+Incorporación de dataset de referencia reproducible.
+
+Introducido:
+
+- Dataset BTC diario de referencia
+- data/processed/btc_1d.csv
+- Firma de integridad SHA256 del dataset
+- reference/baseline/dataset_signature.json
+
+Objetivo:
+
+Garantizar que los experimentos históricos
+utilicen una fuente de datos identificada
+y verificable.
+
+---
+
 ## v0.6.2
 
 Estado:
@@ -493,7 +515,6 @@ Mantenimiento de arquitectura de referencia.
 Introducido:
 
 - Carpeta reference/baseline/
-- Firma de integridad SHA256 del dataset
 - Verificación automática del dataset
 - Referencia oficial de ciclos dominantes
 - Referencia oficial de métricas del modelo legacy
